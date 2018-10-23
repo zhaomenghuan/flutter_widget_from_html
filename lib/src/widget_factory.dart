@@ -45,8 +45,8 @@ class WidgetFactory extends core.WidgetFactory {
   WidgetFactory(BuildContext context, this.config) : super(context);
 
   @override
-  Widget buildImageWidget(core.NodeImage image) => wrapPadding(
-        super.buildImageWidget(image),
+  Widget buildImageWidget(String src, {int height, int width}) => wrapPadding(
+        super.buildImageWidget(src, height: height, width: width),
         config.imagePadding,
       );
 
